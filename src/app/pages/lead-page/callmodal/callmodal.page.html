@@ -1,0 +1,33 @@
+<ion-header color="dark">
+    <ion-toolbar color="dark">
+       <ion-title>
+            Call
+       </ion-title>
+       <ion-buttons slot="end">
+          <ion-button  color="secondary" (click)="dismiss()" >
+             <ion-text style="color: whitesmoke">
+                  Dismiss
+            </ion-text>
+          </ion-button>
+       </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <form [formGroup]="form">
+  
+       <ion-list>
+  
+  
+          <ion-item margin-bottom>
+             <ion-label>Number</ion-label>
+             <ion-input
+                type="text"
+                formControlName="to"></ion-input>
+          </ion-item>
+          <ion-button color="light" text-center (click)="sendMessage(file)">Call</ion-button>
+       </ion-list>
+    </form>
+  </ion-content>
+  
